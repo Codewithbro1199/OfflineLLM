@@ -1,3 +1,5 @@
+<p align="center"><img src="branding/banner-readme-1600x520.png" alt="Offgrid — Your AI. No signal needed."></p>
+
 # Offgrid
 
 A private AI chat app for iPhone that runs entirely on the device. Download a model once, then chat in airplane mode: no account, no servers, and your conversations never leave the phone.
@@ -57,3 +59,7 @@ scripts/      llama.cpp build, simulator picker
 Small on-device models are much weaker than cloud assistants. They can be wrong with confidence and they don't know recent events. Treat answers as a starting point.
 
 See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for licenses.
+
+## Brand
+
+Logo, app icon and banners live in [`branding/`](branding/). Palette: forest `#183c2e`, deep `#0e261d`, cream `#f2eee3`, signal amber `#e9a23b`, sage `#8db59d`. Type: Inter Tight (wordmark), Instrument Serif italic (accent), JetBrains Mono (labels). Regenerate with `branding/source/make_brand.py` and `render.js`.
