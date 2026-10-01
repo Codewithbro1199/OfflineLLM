@@ -10,11 +10,9 @@ struct ModelsView: View {
         List {
             Section {
                 ForEach(ModelCatalog.all) { model in
-                    ModelRow(model: model, isSelected: app.selectedModelID == model.id) {
-                        if !chat.isGenerating { app.select(model) }
-                    } onDelete: {
-                        pendingDelete = model
-                    }
+                    ModelRow(model: model, isSelected: app.selectedModelID == model.id,
+                             onSelect: { if !chat.isGenerating { app.select(model) } },
+                             onDelete: { pendingDelete = model })
                 }
             } footer: {
                 Text("Models download once over Wi-Fi or cellular, then run fully offline. Free space: \(ByteCountFormatter.string(fromByteCount: app.store.freeDiskBytes, countStyle: .file)).")

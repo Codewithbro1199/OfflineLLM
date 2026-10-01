@@ -18,7 +18,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 extension ChatController {
-    static let shared = ChatController()
+    static let shared = ChatController(app: .shared)
 }
 
 @main

@@ -13,7 +13,7 @@ final class ChatController {
     @ObservationIgnored private var generationTask: Task<Void, Never>?
     private let app: AppModel
 
-    init(app: AppModel = .shared) { self.app = app }
+    init(app: AppModel) { self.app = app }
 
     var isGenerating: Bool { activeConversationID != nil }
 

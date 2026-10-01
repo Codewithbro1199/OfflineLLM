@@ -30,9 +30,8 @@ struct OnboardingView: View {
                         Text("Choose a model to download").font(.headline)
                         VStack(spacing: 0) {
                             ForEach(ModelCatalog.all) { model in
-                                ModelRow(model: model, isSelected: app.selectedModelID == model.id) {
-                                    app.select(model)
-                                }
+                                ModelRow(model: model, isSelected: app.selectedModelID == model.id,
+                                         onSelect: { app.select(model) })
                                 .padding(.horizontal, 14)
                                 .padding(.vertical, 8)
                                 if model.id != ModelCatalog.all.last?.id { Divider().padding(.leading, 14) }
